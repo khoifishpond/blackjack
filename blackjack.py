@@ -76,6 +76,13 @@ def show_all(player, dealer):
     for card in player.cards:
         print(card)
 
+def replay():
+    rematch = ""
+
+    while rematch != "Y" and rematch != "N":
+        rematch = input("Rematch? [Y/N]\n").upper().strip()
+
+    return rematch == "Y"
 
 while True:
     print("\nWelcome to BLACKJACK")
@@ -120,9 +127,9 @@ while True:
 
     print("\nPlayer's total chips are at: {}".format(player_chips.total))
 
-    new_game = ""
-    while new_game != "Y" and new_game != "N":
-        new_game = input("Would you like to playing another hand? Y/N\n").upper().strip()
+    # new_game = ""
+    # while new_game != "Y" and new_game != "N":
+    #     new_game = input("Would you like to playing another hand? Y/N\n").upper().strip()
 
     # if new_game[0].lower().strip() == 'y':
     #     playing = True
@@ -132,3 +139,7 @@ while True:
     #     break
     # else:
     #     print("Please type Y or N\n")
+
+    if not replay():
+        print("Thank you for playing")
+        break
