@@ -106,7 +106,7 @@ while True:
     if player_hand.value <= 21:
         while dealer_hand.value < 17:
             hit(deck, dealer_hand)
-            if dealer.hand.value = 17:
+            if dealer_hand.value = 17:
                 print("Dealer stands")
 
         show_all(player_hand, dealer_hand)
