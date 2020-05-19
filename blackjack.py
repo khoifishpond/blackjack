@@ -80,7 +80,7 @@ def replay():
     rematch = ""
 
     while rematch != "Y" and rematch != "N":
-        rematch = input("Rematch? [Y/N]\n").upper().strip()
+        rematch = input("Play another hand? [Y/N]\n").upper().strip()
 
     return rematch == "Y"
 
@@ -143,3 +143,5 @@ while True:
     if not replay():
         print("Thank you for playing")
         break
+    else:
+        playing = True
