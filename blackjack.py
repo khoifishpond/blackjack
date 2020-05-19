@@ -127,19 +127,6 @@ while True:
 
     print("\nPlayer's total chips are at: {}".format(player_chips.total))
 
-    # new_game = ""
-    # while new_game != "Y" and new_game != "N":
-    #     new_game = input("Would you like to playing another hand? Y/N\n").upper().strip()
-
-    # if new_game[0].lower().strip() == 'y':
-    #     playing = True
-    #     continue
-    # elif new_game[0].lower().strip() == 'n':
-    #     print("Thank you for playing")
-    #     break
-    # else:
-    #     print("Please type Y or N\n")
-
     if not replay():
         print("Thank you for playing")
         break
