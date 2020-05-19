@@ -5,7 +5,6 @@ from chip import Chip
 playing = True
 
 def take_bet(chips):
-
     while True:
 
         try:
@@ -21,13 +20,11 @@ def take_bet(chips):
                 break
 
 def hit(deck, hand):
-
     card = deck.deal()
     hand.add_card(card)
     hand.adjust_for_aces()
 
 def hit_or_stand(deck, hand):
-
     global playing
 
     while True:
@@ -44,12 +41,10 @@ def hit_or_stand(deck, hand):
         break
 
 def player_busts(player, dealer, chips):
-
     print("Player BUSTS!")
     chips.lose_bet()
 
 def player_wins(player, dealer, chips):
-
     print("Player WINS!")
     chips.win_bet()
 
@@ -58,16 +53,13 @@ def dealer_busts(player, dealer, chips):
     chips.win_bet()
 
 def dealer_wins(player, dealer, chips):
-
     print("Dealer WINS!")
     chips.lose_bet()
 
 def push():
-
     print("Dealer and player tie. PUSH!")
 
 def show_some(player, dealer):
-
     print("Dealer's hand:")
     print(dealer.cards[0])
     print("???\n")
@@ -76,7 +68,6 @@ def show_some(player, dealer):
         print(card)
 
 def show_all(player, dealer):
-
     print("\nDealer's hand:")
     for card in dealer.cards:
         print(card)
@@ -87,7 +78,6 @@ def show_all(player, dealer):
 
 
 while True:
-
     print("\nWelcome to BLACKJACK")
     deck = Deck()
     deck.shuffle()
@@ -141,4 +131,4 @@ while True:
         print("Thank you for playing")
         break
     else:
-        print("Please type Y or N")
+        print("Please type Y or N\n")

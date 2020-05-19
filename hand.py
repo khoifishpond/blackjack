@@ -6,11 +6,13 @@ class Hand:
     global values
 
     def __init__(self):
+
         self.cards = []
         self.value = 0
         self.aces = 0
 
     def add_card(self, card):
+
         # The card passed in from the deck
         self.cards.append(card)
         self.value += values[card.rank]
@@ -19,6 +21,7 @@ class Hand:
             self.aces += 1
 
     def adjust_for_aces(self):
+
         while self.value > 21 and self.aces > 0:
             self.value -= 10
             self.aces -= 1
