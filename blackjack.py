@@ -14,8 +14,8 @@ def take_bet(chips):
         else:
             if chips.bet > chips.total:
                 print("You don't have enough chips to make that wager")
-            elif chips.bet < 0:
-                print("You can't bet wager less than 0 chips")
+            elif chips.bet <= 0:
+                print("You can't make that wager")
             else:
                 break
 
@@ -106,8 +106,6 @@ while True:
     if player_hand.value <= 21:
         while dealer_hand.value < 17:
             hit(deck, dealer_hand)
-            if dealer_hand.value = 17:
-                print("Dealer stands")
 
         show_all(player_hand, dealer_hand)
 
@@ -118,7 +116,7 @@ while True:
         elif dealer_hand.value < player_hand.value:
             player_wins(player_hand, dealer_hand, player_chips)
         else:
-            push(player_hand, dealer_hand)
+            push()
 
     print("\nPlayer's total chips are at: {}".format(player_chips.total))
 
