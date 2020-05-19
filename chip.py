@@ -1,9 +1,9 @@
 class Chip:
 
 
-    def __init__(self):
+    def __init__(self, total=100):
 
-        self.total = 100
+        self.total = total
         self.bet = 0
 
     def win_bet(self):
