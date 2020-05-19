@@ -6,7 +6,6 @@ playing = True
 
 def take_bet(chips):
     while True:
-
         try:
             chips.bet = int(input("You have 100 chips. How much would you like to wager? "))
         except:
